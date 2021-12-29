@@ -4,12 +4,29 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/radio.css">
   <title>Parsing statistics from Telegramm</title>
   <script src="./scripts/index.js" type="module" defer></script>
 </head>
 <body>
   <div class="container">
+    <div class="header">
+      <div>
+        <label for="Edit" class="switch-label">
+          <input type="radio" name="switch" id="Edit" value="Edit" class="switch-edit" />
+          <span>Edit</span>
+        </label>
+        <label for="Result" class="switch-label">
+          <input type="radio" name="switch" id="Result" value="Result" class="switch-result"/>
+          <span>Result</span>
+        </label>
+      </div>
+
+      <button class="show-btn">Показать</button>
+    </div>
+
+    <div class="root"></div>
   </div>
 </body>
 </html>

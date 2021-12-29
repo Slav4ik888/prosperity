@@ -1,0 +1,50 @@
+html {
+  height: 100%;
+  font-family: Roboto, -apple-system, sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 600px;
+  margin: auto;
+}
+
+.disabled {
+  display: none;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 20px 0;
+  padding: 20px 0;
+  border-bottom: 1px solid #000;
+}
+
+.show-btn {
+  margin-left: 20px;
+}
+
+.switch-label {
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.result-strip {
+  display: flex;
+}
+
+.result-strip-item {
+  padding: 0 5px;
+}
+
+.origin-text {
+  min-width: 300px;
+}
+
+.user-name {
+  min-width: 170px;
+}

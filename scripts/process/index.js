@@ -2,10 +2,12 @@ import { prepareDate } from './prepeare-date.js';
 import { prepeareUser } from './prepeare-user.js';
 import { prepeareResult } from './prepeare-result.js';
 import { validate } from './validate.js';
+import { store, ActionType } from '../store/index.js';
 
-
-export function processData(messages) {
+export function processData() {
   let result = [];
+
+  const messages = store.getState().messages;
 
   messages.forEach(m => {
     const valid = validate(m);
@@ -28,5 +30,5 @@ export function processData(messages) {
     }
   })
 
-  return result;
+  store.dispatch({ type: ActionType.SET_RESULT, payload: result });
 }

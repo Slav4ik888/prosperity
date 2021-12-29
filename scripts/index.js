@@ -1,15 +1,14 @@
 import { getMessages } from './get-messages.js';
 import { showResults } from './show/show-results.js';
-import { processData } from './process/index.js';
+import './switch.js';
+import './store/index.js';
 
-const sort = true;
-// const sort = false;
 
 const url = `./data/result.json`;
-let messages = []; // Storage
 
+await getMessages(url);
 
-await getMessages(messages, url);
+const $showBtn = document.querySelector(`.show-btn`);
+$showBtn.addEventListener(`click`, showResults);
 
-const result = processData(messages);
-showResults(result, sort);
+// git add . && git commit -m "add store" && git push origin master
