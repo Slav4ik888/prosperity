@@ -1,16 +1,16 @@
 import { sortingArr } from '../sorting/sorting-arr.js';
-import { createElement, createResultStrip } from './index.js';
+import { createElement, createResultStrip, getNode } from './index.js';
 import { filterResult } from '../process/filter-result.js';
 import { store } from '../store/index.js';
 
 export const onShow = () => {
 
-  const $root  = document.querySelector(`.root`);
+  const $root  = getNode(`.root`);
   $root.textContent = ``;
   
   const $table = createElement(`table`, `results`);
 
-  const $tbody = document.createElement(`tbody`);
+  const $tbody = createElement(`tbody`);
   
   $table.insertAdjacentElement(`afterbegin`, $tbody);
     
@@ -18,7 +18,7 @@ export const onShow = () => {
   const edit    = store.getState().edit;
 
   const filtredResult = edit ? [...results] : filterResult(results);
-  const sortedResults = edit ? sortingArr(results, `date`, true) : [...filtredResult];
+  const sortedResults = edit ? sortingArr(filtredResult, `dateNumber`, true) : [...filtredResult];
   console.log('LENGHT: ', sortedResults.length);
 
   sortedResults.forEach(r => {

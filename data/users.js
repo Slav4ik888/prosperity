@@ -8,6 +8,10 @@ export default [
     userId: ``
   },
   {
+    user: `Сагдеев Ринель`,
+    userId: `user368708357`
+  },
+  {
     user: `Богданова Елена`,
     userId: ``
   },
@@ -69,7 +73,7 @@ export default [
   },
   {
     user: `Сайкал Бизнес Woman`,
-    userId: ``
+    userId: `user1330217822`
   },
   {
     user: `Сергей 07-16`,

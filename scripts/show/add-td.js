@@ -1,10 +1,11 @@
-import { createElement } from './index.js';
+import { createElement, addClasses } from './index.js';
 
-export const addTd = (elem, className = ``, value, edit) => {
+
+export const addTd = (elem, classNames, value, edit) => {
   if (edit === false) return ``
 
   const $td = createElement(`td`, `result-strip-item`);
-  if (className) $td.classList.add(className);
+  if (classNames.length) addClasses($td, classNames);
 
   $td.textContent = value;
   elem.insertAdjacentElement(`beforeend`, $td);

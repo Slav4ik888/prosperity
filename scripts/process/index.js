@@ -15,6 +15,7 @@ export function processData() {
     if (valid) {
       const item = {
         date       : prepareDate(m.date),
+        dateNumber : prepareDate(m.date, true),
         user       : prepeareUser(m.from_id),
         result     : prepeareResult(m.text),
 
