@@ -2,13 +2,16 @@ html {
   height: 100%;
   font-family: Roboto, -apple-system, sans-serif;
 }
-
+body {
+  padding-bottom: 32px;
+}
 .container {
   display: flex;
   justify-content: center;
   flex-direction: column;
   width: 900px;
-  margin: auto;
+  /* margin: auto; */
+  margin-bottom: 32px;
 }
 
 .disabled {
@@ -47,7 +50,9 @@ html {
 }
 
 .user-name {
-  min-width: 170px;
+  min-width: 200px;
+  max-width: 270px;
+  overflow-x: hidden;
 }
 .no-user-name {
   background-color: red;

@@ -5,7 +5,8 @@ const isUser = (str) => str?.startsWith(`user`);
 
 export const createResultStrip = (resMessage, edit) => {
   const isNoUserClass = isUser(resMessage?.user) ? `no-user-name` : ``;
-  console.log('isNoUserClass: ', isNoUserClass);
+  if (isNoUserClass) console.log('isNoUserClass: ', isNoUserClass);
+  
   const $tr = createElement(`tr`);
 
   addTd($tr, ``,                           resMessage.date);
