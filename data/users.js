@@ -1,7 +1,27 @@
 export default [
   {
-    user: 'Кривоносова Лена',
-    userId: ''
+    user: 'Айя Курбанова',
+    userId: 'user492509973'
+  },
+  {
+    user: 'Наталья Пиханова',
+    userId: 'user208399383'
+  },
+  {
+    user: 'Влада',
+    userId: 'user299400842'
+  },
+  {
+    user: 'Алексей Вятлев',
+    userId: 'user481424771'
+  },
+  {
+    user: 'Вячеслав Леонов',
+    userId: 'user469583323'
+  },
+  {	
+    user: 'Полина',
+    userId: 'user1118965766'
   },
   {
     user: 'Федор Зенин',

@@ -1,18 +1,21 @@
 import { testEqual } from '../testing/index.js';
 
 
-export const getDigit = (str) => str.replace(/\D/g, ``);
+export const getDigit = (str) => str.replace(/\D/g, '');
+
 const getNumber = (str) => {
-  const idx = str.indexOf(`/`);
-  if (idx === -1) return 0
+  const match = str.match(/(\d+)\s*\//);
 
-  const _str = str.slice(0, idx);
-
-  return getDigit(_str)
+  if (match) {
+    return match[1];
+    // console.log(match[1]); // Output: 60
+  } else {
+    // console.log('No match found');
+  }
 };
 
 const getNumberFromArray = (text) => {
-  let str = ``;
+  let str = '';
   
   text.forEach(item => {
     if (typeof item === 'string') str += item;
@@ -28,6 +31,8 @@ export const prepeareResult = (text) => {
   return getNumber(text)
 };
 
-testEqual(() => prepeareResult(`60/60, sdlfkjlj`)          , `60`);
-testEqual(() => prepeareResult([`60/60, sdlfkjlj`])        , `60`);
-testEqual(() => prepeareResult([{text: `60/60, sdlfkjlj`}]), `60`);
+
+testEqual(() => prepeareResult('40 60/80, sdlfkjlj')       , '60');
+testEqual(() => prepeareResult('60/80, sdlfkjlj')          , '60');
+testEqual(() => prepeareResult(['60/80, sdlfkjlj'])        , '60');
+testEqual(() => prepeareResult([{text: '60/80, sdlfkjlj'}]), '60');
